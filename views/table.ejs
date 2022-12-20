@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<section id="table">
+    <div class="table">
+        <table>
+            <tr>
+               <th>id</th>
+               <th>paymentType</th>
+               <th>İsim</th>
+               <th>Soyad</th>
+               <th>mail</th>
+               <th>phonenumber</th>
+               <th>productId</th>
+               <th>country</th>
+               <th>city</th>
+               <th>town</th>
+               <th>address</th>
+               <th>currency</th>
+               <th>price</th>
+               <th>quantity</th>
+               <th>resource</th>
+            </tr>
+
+
+
+        <% for(var i = 0; i < contacts.rows.length; i++) { %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= contacts.rows[i].paymentType %></td>
+                    <td><%= contacts.rows[i].name %></td>
+                    <td><%= contacts.rows[i].surname %></td>
+                    <td><%= contacts.rows[i].email %></td>
+                    <td><%= contacts.rows[i].phonenumber %></td>
+                    <td><%= contacts.rows[i].productId %></td>
+                    <td><%= contacts.rows[i].country %></td>
+                    <td><%= contacts.rows[i].city %></td>
+                    <td><%= contacts.rows[i].town %></td>
+                    <td><%= contacts.rows[i].address %></td>
+                    <td><%= contacts.rows[i].currency %></td>
+                    <td><%= contacts.rows[i].price %></td>
+                    <td><%= contacts.rows[i].quantity %></td>
+                    <td><%= contacts.rows[i].resource %></td>
+                </tr>
+        <% } %>    
+        
+    </table>
+    </div>
+</section>
+
+
+</body>
+</html>
